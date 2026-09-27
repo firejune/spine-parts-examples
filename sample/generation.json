@@ -1,0 +1,278 @@
+{
+  "key": "sample",
+  "seed": 70011,
+  "checkpoint": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors",
+  "checkpoint_source": "Pony Diffusion V6 XL, version \"V6 (start with this one)\", https://civitai.com/models/257749",
+  "loras": [],
+  "trigger": "",
+  "sampler": {
+    "steps": 30,
+    "cfg": 6.0,
+    "sampler": "euler_ancestral",
+    "scheduler": "normal"
+  },
+  "control": {
+    "skeleton": "stand_clasp",
+    "strength": 0.8,
+    "end_percent": 0.7,
+    "start_percent": 0.0,
+    "model": "controlnet-openpose-sdxl-1.0.safetensors",
+    "model_note": "read from the ComfyUI workflow embedded in painting.png (its tEXt \"prompt\" chunk), which is left in the file as provenance"
+  },
+  "latent": [
+    832,
+    1216
+  ],
+  "upscale": "4x-AnimeSharp.pth (ImageUpscaleWithModel), then ImageScaleBy lanczos x0.5; read from the workflow embedded in painting.png",
+  "size": [
+    1664,
+    2432
+  ],
+  "elapsed_s": 20.2,
+  "prompt_parts": {
+    "identity": "1girl, solo, adult woman, long wavy chestnut hair, green eyes, soft smile, fair skin",
+    "costume": "simple cream blouse, navy pinafore dress, ankle-length skirt, flat brown shoes, fully clothed, empty hands",
+    "style": "anime illustration, detailed, soft shading, (white background:1.3), simple background, plain background",
+    "negative_extra": "revealing clothes, bare shoulders, off shoulder, 2girls, multiple girls, holding, bag, weapon, clouds, cloud, sun, sky, sky background, grey background, blue background, gradient background, scenery, outdoors, from behind, back view, back of head, facing away, vignette, beige background, brown background, dark background, black background, spotlight, lighting gradient",
+    "negative_pose": "cropped, out of frame, cut off feet, close-up, portrait, upper body, from side, profile, sitting, kneeling, dynamic pose, arms raised, hand on face, contact shadow, cast shadow, floor, multiple views, reference sheet",
+    "pose_note": "generation.pose is absent, so the generation script used its default pose words for the stand_clasp skeleton; those words include 'long robe to the ankles', which is visible in the positive string"
+  },
+  "positive": "score_9, score_8_up, score_7_up, source_anime, masterpiece, best quality, highly detailed, 1girl, solo, adult woman, long wavy chestnut hair, green eyes, soft smile, fair skin, simple cream blouse, navy pinafore dress, ankle-length skirt, flat brown shoes, fully clothed, empty hands, full body, head to toe, entire body in frame, front view, facing viewer, looking at viewer, standing, hands clasped in front of waist, own hands together, relaxed pose, gentle smile, long robe to the ankles, feet visible, shoes, anime illustration, detailed, soft shading, (white background:1.3), simple background, plain background",
+  "negative": "score_4, score_3, score_2, score_1, worst quality, low quality, lowres, blurry, jpeg artifacts, nsfw, nude, naked, cleavage, underwear, sexual, suggestive, child, loli, shota, kid, toddler, text, watermark, signature, logo, bad anatomy, bad hands, extra fingers, deformed, mutated, revealing clothes, bare shoulders, off shoulder, 2girls, multiple girls, holding, bag, weapon, clouds, cloud, sun, sky, sky background, grey background, blue background, gradient background, scenery, outdoors, from behind, back view, back of head, facing away, vignette, beige background, brown background, dark background, black background, spotlight, lighting gradient, cropped, out of frame, cut off feet, close-up, portrait, upper body, from side, profile, sitting, kneeling, dynamic pose, arms raised, hand on face, contact shadow, cast shadow, floor, multiple views, reference sheet",
+  "seed_selection": {
+    "criteria": {
+      "border_white_frac": "fraction of pixels in the outer 8 px ring whose minimum channel is >= 235 (the assembler's near-white threshold)",
+      "silhouette": "pixels that are not near-white AND differ from the border's median colour by > 40 on some channel, opened twice (3x3)",
+      "components_ge_1pct": "8-connected components of the silhouette with area >= 1 % of the largest (a single figure = 1)",
+      "lowest_row_frac / top_row_frac": "extent of those components over the image height; < 0.995 and > 0.01 mean the feet and the head are inside the frame",
+      "bbox_h_over_w": "height / width of the largest component's bounding box",
+      "dark_clusters_outside_figure": "8-connected components of pixels with min channel < 90, area 20-3000 px, centred outside the main bbox (+-10 px): a proxy for text, watermarks and stray marks",
+      "pass_rule": "border_white_frac >= 0.99 and components_ge_1pct == 1 and lowest_row_frac < 0.995 and top_row_frac > 0.01 and bbox_h_over_w >= 3 and dark_clusters_outside_figure == 0"
+    },
+    "batches": {
+      "1": "seeds 70001-70006; negative_extra without its last seven terms ('vignette, beige background, brown background, dark background, black background, spotlight, lighting gradient'); 0 of 6 had a near-white border",
+      "2": "seeds 70007-70012; the seven terms appended; 2 of 6 had a near-white border (70010, 70011)"
+    },
+    "note": "each seed's exact prompt strings are in its own generation record, which is not published here; batch 1's negative is the chosen one minus the seven terms named above",
+    "seeds": [
+      {
+        "seed": 70001,
+        "batch": 1,
+        "elapsed_s": 33.1,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          148,
+          133,
+          107
+        ],
+        "border_std": 26.0,
+        "components_ge_1pct": 2,
+        "lowest_row_frac": 0.9811,
+        "top_row_frac": 0.0,
+        "bbox_h_over_w": 1.49,
+        "dark_clusters_outside_figure": 47,
+        "PASS": false
+      },
+      {
+        "seed": 70002,
+        "batch": 1,
+        "elapsed_s": 18.4,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          38,
+          34,
+          24
+        ],
+        "border_std": 46.0,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9996,
+        "top_row_frac": 0.0,
+        "bbox_h_over_w": 1.89,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      },
+      {
+        "seed": 70003,
+        "batch": 1,
+        "elapsed_s": 18.6,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          211,
+          206,
+          199
+        ],
+        "border_std": 6.0,
+        "components_ge_1pct": 2,
+        "lowest_row_frac": 0.9762,
+        "top_row_frac": 0.0826,
+        "bbox_h_over_w": 3.01,
+        "dark_clusters_outside_figure": 5,
+        "PASS": false
+      },
+      {
+        "seed": 70004,
+        "batch": 1,
+        "elapsed_s": 18.2,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          35,
+          23,
+          11
+        ],
+        "border_std": 9.7,
+        "components_ge_1pct": 4,
+        "lowest_row_frac": 0.9227,
+        "top_row_frac": 0.0654,
+        "bbox_h_over_w": 1.64,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      },
+      {
+        "seed": 70005,
+        "batch": 1,
+        "elapsed_s": 19.1,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          226,
+          214,
+          194
+        ],
+        "border_std": 1.9,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9889,
+        "top_row_frac": 0.0794,
+        "bbox_h_over_w": 4.23,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      },
+      {
+        "seed": 70006,
+        "batch": 1,
+        "elapsed_s": 18.5,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          217,
+          202,
+          187
+        ],
+        "border_std": 13.6,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9655,
+        "top_row_frac": 0.072,
+        "bbox_h_over_w": 5.04,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      },
+      {
+        "seed": 70007,
+        "batch": 2,
+        "elapsed_s": 20.2,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          199,
+          197,
+          194
+        ],
+        "border_std": 8.9,
+        "components_ge_1pct": 2,
+        "lowest_row_frac": 0.9741,
+        "top_row_frac": 0.0683,
+        "bbox_h_over_w": 3.54,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      },
+      {
+        "seed": 70008,
+        "batch": 2,
+        "elapsed_s": 18.2,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          42,
+          48,
+          42
+        ],
+        "border_std": 7.0,
+        "components_ge_1pct": 4,
+        "lowest_row_frac": 0.9576,
+        "top_row_frac": 0.0765,
+        "bbox_h_over_w": 1.42,
+        "dark_clusters_outside_figure": 7,
+        "PASS": false
+      },
+      {
+        "seed": 70009,
+        "batch": 2,
+        "elapsed_s": 19.3,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          149,
+          145,
+          144
+        ],
+        "border_std": 32.8,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9996,
+        "top_row_frac": 0.0,
+        "bbox_h_over_w": 2.02,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      },
+      {
+        "seed": 70010,
+        "batch": 2,
+        "elapsed_s": 20.2,
+        "border_white_frac": 1.0,
+        "border_median_rgb": [
+          244,
+          244,
+          244
+        ],
+        "border_std": 0.7,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9642,
+        "top_row_frac": 0.0715,
+        "bbox_h_over_w": 4.23,
+        "dark_clusters_outside_figure": 0,
+        "PASS": true
+      },
+      {
+        "seed": 70011,
+        "batch": 2,
+        "elapsed_s": 20.2,
+        "border_white_frac": 1.0,
+        "border_median_rgb": [
+          255,
+          254,
+          255
+        ],
+        "border_std": 0.4,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9733,
+        "top_row_frac": 0.0654,
+        "bbox_h_over_w": 4.0,
+        "dark_clusters_outside_figure": 0,
+        "PASS": true
+      },
+      {
+        "seed": 70012,
+        "batch": 2,
+        "elapsed_s": 18.2,
+        "border_white_frac": 0.0,
+        "border_median_rgb": [
+          213,
+          210,
+          209
+        ],
+        "border_std": 5.7,
+        "components_ge_1pct": 1,
+        "lowest_row_frac": 0.9799,
+        "top_row_frac": 0.0752,
+        "bbox_h_over_w": 3.68,
+        "dark_clusters_outside_figure": 0,
+        "PASS": false
+      }
+    ],
+    "chosen": 70011,
+    "why": "70010 and 70011 are the only seeds passing every criterion; the tie was broken on the background: 70011's border median is (255, 254, 255) with std 0.4, 70010's is (244, 244, 244) with std 0.7, and 70011 is closer to the white the full-run See-through input is padded with. Colour and costume fidelity were not criteria; 70011 has brown hair where the identity asks for chestnut."
+  }
+}

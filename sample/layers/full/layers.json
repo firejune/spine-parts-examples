@@ -1,0 +1,298 @@
+{
+  "prefix": "r4sample_full",
+  "timestamp": "20260927_225702_88ea024c",
+  "layers": [
+    {
+      "name": "neckwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_neckwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_neckwear_depth.png"
+    },
+    {
+      "name": "tail",
+      "filename": "r4sample_full_20260927_225702_88ea024c_tail.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_tail_depth.png"
+    },
+    {
+      "name": "wings",
+      "filename": "r4sample_full_20260927_225702_88ea024c_wings.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_wings_depth.png"
+    },
+    {
+      "name": "objects",
+      "filename": "r4sample_full_20260927_225702_88ea024c_objects.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_objects_depth.png"
+    },
+    {
+      "name": "headwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_headwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_headwear_depth.png"
+    },
+    {
+      "name": "eyewear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyewear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyewear_depth.png"
+    },
+    {
+      "name": "earwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_earwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_earwear_depth.png"
+    },
+    {
+      "name": "handwear-r",
+      "filename": "r4sample_full_20260927_225702_88ea024c_handwear-r.png",
+      "left": 0,
+      "top": 1014,
+      "right": 1,
+      "bottom": 1022,
+      "depth_median": 1.0,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_handwear-r_depth.png"
+    },
+    {
+      "name": "back hair",
+      "filename": "r4sample_full_20260927_225702_88ea024c_back hair.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.921875,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_back hair_depth.png"
+    },
+    {
+      "name": "legwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_legwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.890625,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_legwear_depth.png"
+    },
+    {
+      "name": "footwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_footwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.8828125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_footwear_depth.png"
+    },
+    {
+      "name": "bottomwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_bottomwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.8359375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_bottomwear_depth.png"
+    },
+    {
+      "name": "neck",
+      "filename": "r4sample_full_20260927_225702_88ea024c_neck.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.76171875,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_neck_depth.png"
+    },
+    {
+      "name": "eyewhite-r",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyewhite-r.png",
+      "left": 479,
+      "top": 130,
+      "right": 498,
+      "bottom": 144,
+      "depth_median": 0.7578125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyewhite-r_depth.png"
+    },
+    {
+      "name": "eyewhite-l",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyewhite-l.png",
+      "left": 517,
+      "top": 130,
+      "right": 537,
+      "bottom": 144,
+      "depth_median": 0.7578125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyewhite-l_depth.png"
+    },
+    {
+      "name": "handwear-l",
+      "filename": "r4sample_full_20260927_225702_88ea024c_handwear-l.png",
+      "left": 398,
+      "top": 218,
+      "right": 631,
+      "bottom": 562,
+      "depth_median": 0.72265625,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_handwear-l_depth.png"
+    },
+    {
+      "name": "topwear",
+      "filename": "r4sample_full_20260927_225702_88ea024c_topwear.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.7109375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_topwear_depth.png"
+    },
+    {
+      "name": "eyebrow-l",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyebrow-l.png",
+      "left": 518,
+      "top": 123,
+      "right": 543,
+      "bottom": 130,
+      "depth_median": 0.61328125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyebrow-l_depth.png"
+    },
+    {
+      "name": "eyebrow-r",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyebrow-r.png",
+      "left": 475,
+      "top": 122,
+      "right": 500,
+      "bottom": 131,
+      "depth_median": 0.5234375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyebrow-r_depth.png"
+    },
+    {
+      "name": "face",
+      "filename": "r4sample_full_20260927_225702_88ea024c_face.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.51953125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_face_depth.png"
+    },
+    {
+      "name": "nose",
+      "filename": "r4sample_full_20260927_225702_88ea024c_nose.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.51853125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_nose_depth.png"
+    },
+    {
+      "name": "mouth",
+      "filename": "r4sample_full_20260927_225702_88ea024c_mouth.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.51853125,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_mouth_depth.png"
+    },
+    {
+      "name": "front hair",
+      "filename": "r4sample_full_20260927_225702_88ea024c_front hair.png",
+      "left": 0,
+      "top": 0,
+      "right": 1024,
+      "bottom": 1024,
+      "depth_median": 0.484375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_front hair_depth.png"
+    },
+    {
+      "name": "ears-l",
+      "filename": "r4sample_full_20260927_225702_88ea024c_ears-l.png",
+      "left": 536,
+      "top": 129,
+      "right": 552,
+      "bottom": 154,
+      "depth_median": 0.46484375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_ears-l_depth.png"
+    },
+    {
+      "name": "ears-r",
+      "filename": "r4sample_full_20260927_225702_88ea024c_ears-r.png",
+      "left": 463,
+      "top": 129,
+      "right": 481,
+      "bottom": 154,
+      "depth_median": 0.4609375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_ears-r_depth.png"
+    },
+    {
+      "name": "irides-r",
+      "filename": "r4sample_full_20260927_225702_88ea024c_irides-r.png",
+      "left": 481,
+      "top": 128,
+      "right": 497,
+      "bottom": 142,
+      "depth_median": 0.3583984375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_irides-r_depth.png"
+    },
+    {
+      "name": "irides-l",
+      "filename": "r4sample_full_20260927_225702_88ea024c_irides-l.png",
+      "left": 518,
+      "top": 130,
+      "right": 534,
+      "bottom": 145,
+      "depth_median": 0.3583984375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_irides-l_depth.png"
+    },
+    {
+      "name": "eyelash-l",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyelash-l.png",
+      "left": 513,
+      "top": 125,
+      "right": 541,
+      "bottom": 145,
+      "depth_median": 0.326171875,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyelash-l_depth.png"
+    },
+    {
+      "name": "eyelash-r",
+      "filename": "r4sample_full_20260927_225702_88ea024c_eyelash-r.png",
+      "left": 475,
+      "top": 123,
+      "right": 503,
+      "bottom": 143,
+      "depth_median": 0.302734375,
+      "depth_filename": "r4sample_full_20260927_225702_88ea024c_eyelash-r_depth.png"
+    }
+  ],
+  "width": 1024,
+  "height": 1024
+}
