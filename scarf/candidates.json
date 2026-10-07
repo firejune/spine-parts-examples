@@ -1,0 +1,247 @@
+{
+  "note": "Six candidate paintings, seeds 72001-72006, all from the same prompt, checkpoint, sampler and control. Each went through the full See-through run and `spine-parts layers`. Only 72004 is published as an image; the rest are recorded here as measurements.",
+  "shared": {
+    "checkpoint": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors",
+    "loras": [],
+    "trigger": "",
+    "sampler": {
+      "steps": 30,
+      "cfg": 6.0,
+      "sampler": "euler_ancestral",
+      "scheduler": "normal"
+    },
+    "control": {
+      "skeleton": "stand_sides",
+      "strength": 0.8,
+      "end_percent": 0.7
+    }
+  },
+  "positive": "score_9, score_8_up, score_7_up, source_anime, masterpiece, best quality, highly detailed, 1girl, solo, adult woman, shoulder-length straight black hair, brown eyes, soft smile, fair skin, very long red knitted scarf wrapped once around the neck, both long scarf ends hanging straight down the front of the body past the waist to the thighs, scarf fringe at the ends, beige knit sweater, dark green pleated skirt to the knees, black tights, brown loafers, fully clothed, empty hands, full body, head to toe, entire body in frame, front view, facing viewer, looking at viewer, standing, arms at sides, relaxed arms, relaxed pose, anime illustration, detailed, soft shading, (white background:1.3), simple background, plain background",
+  "negative": "score_4, score_3, score_2, score_1, worst quality, low quality, lowres, blurry, jpeg artifacts, nsfw, nude, naked, cleavage, underwear, sexual, suggestive, child, loli, shota, kid, toddler, text, watermark, signature, logo, bad anatomy, bad hands, extra fingers, deformed, mutated, revealing clothes, bare shoulders, off shoulder, 2girls, multiple girls, holding, bag, weapon, clouds, cloud, sun, sky, sky background, grey background, blue background, gradient background, scenery, outdoors, from behind, back view, back of head, facing away, vignette, beige background, brown background, dark background, black background, spotlight, lighting gradient, hands in pockets, coat, jacket, cropped, out of frame, cut off feet, close-up, portrait, upper body, from side, profile, sitting, kneeling, dynamic pose, arms raised, hand on face, contact shadow, cast shadow, floor, multiple views, reference sheet",
+  "seeds": [
+    72001,
+    72002,
+    72003,
+    72004,
+    72005,
+    72006
+  ],
+  "criteria": {
+    "frame_test": "refuse a painting with any pixel on its outermost row or column (the 1 px border, 8188 pixels at 1664x2432) whose minimum channel is <= 200; bbox_min_channel_le_200 is the inclusive [x0, y0, x1, y1] box of every pixel of the painting whose minimum channel is <= 200, so on a grey background it is the whole image",
+    "paint_elapsed_s": "the GPU job time of the painting, as the painting run logged it",
+    "seethrough_full_elapsed_s": "the full See-through run's elapsed seconds, from its meta.json",
+    "layers_warn_lines": "WARN lines printed by `spine-parts layers` over the full run",
+    "layers_full": "layers in the full run's manifest",
+    "opaque_px": "pixels with alpha > 8 in the full run's layer PNG (the `opaque_px` column of `spine-parts layers`)"
+  },
+  "selection_rule": "refuse a painting by the frame test; then fewest layers_warn_lines; then most layers_full; then lowest seed",
+  "images": [
+    {
+      "seed": 72001,
+      "paint_elapsed_s": 30.3,
+      "size": [
+        1664,
+        2432
+      ],
+      "frame_test": "refused",
+      "border_px_min_channel_le_200": 8188,
+      "border_px_total": 8188,
+      "border_edges_reached": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "border_median_rgb": [
+        186,
+        185,
+        181
+      ],
+      "bbox_min_channel_le_200": [
+        0,
+        0,
+        1663,
+        2431
+      ],
+      "seethrough_full_elapsed_s": 191.2,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 42837,
+        "neckwear": 75,
+        "back hair": 18419
+      }
+    },
+    {
+      "seed": 72002,
+      "paint_elapsed_s": 18.3,
+      "size": [
+        1664,
+        2432
+      ],
+      "frame_test": "refused",
+      "border_px_min_channel_le_200": 608,
+      "border_px_total": 8188,
+      "border_edges_reached": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "border_median_rgb": [
+        207,
+        206,
+        202
+      ],
+      "bbox_min_channel_le_200": [
+        0,
+        0,
+        1663,
+        2431
+      ],
+      "seethrough_full_elapsed_s": 173.3,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 53678,
+        "neckwear": 76,
+        "back hair": 13011
+      }
+    },
+    {
+      "seed": 72003,
+      "paint_elapsed_s": 18.2,
+      "size": [
+        1664,
+        2432
+      ],
+      "frame_test": "refused",
+      "border_px_min_channel_le_200": 8090,
+      "border_px_total": 8188,
+      "border_edges_reached": [
+        "top",
+        "bottom",
+        "left",
+        "right"
+      ],
+      "border_median_rgb": [
+        196,
+        195,
+        193
+      ],
+      "bbox_min_channel_le_200": [
+        0,
+        0,
+        1663,
+        2431
+      ],
+      "seethrough_full_elapsed_s": 170.4,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 53985,
+        "neckwear": 77,
+        "back hair": 17193
+      }
+    },
+    {
+      "seed": 72004,
+      "paint_elapsed_s": 18.5,
+      "size": [
+        1664,
+        2432
+      ],
+      "frame_test": "in frame",
+      "border_px_min_channel_le_200": 0,
+      "border_px_total": 8188,
+      "border_edges_reached": [],
+      "border_median_rgb": [
+        252,
+        250,
+        244
+      ],
+      "bbox_min_channel_le_200": [
+        547,
+        166,
+        1122,
+        2374
+      ],
+      "seethrough_full_elapsed_s": 170.3,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 95461,
+        "neckwear": 76,
+        "back hair": 75
+      }
+    },
+    {
+      "seed": 72005,
+      "paint_elapsed_s": 18.6,
+      "size": [
+        1664,
+        2432
+      ],
+      "frame_test": "in frame",
+      "border_px_min_channel_le_200": 0,
+      "border_px_total": 8188,
+      "border_edges_reached": [],
+      "border_median_rgb": [
+        243,
+        241,
+        237
+      ],
+      "bbox_min_channel_le_200": [
+        570,
+        172,
+        1067,
+        2355
+      ],
+      "seethrough_full_elapsed_s": 172.8,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 74814,
+        "neckwear": 69,
+        "back hair": 77
+      }
+    },
+    {
+      "seed": 72006,
+      "paint_elapsed_s": 18.3,
+      "size": [
+        1664,
+        2432
+      ],
+      "frame_test": "in frame",
+      "border_px_min_channel_le_200": 0,
+      "border_px_total": 8188,
+      "border_edges_reached": [],
+      "border_median_rgb": [
+        222,
+        218,
+        211
+      ],
+      "bbox_min_channel_le_200": [
+        588,
+        166,
+        1076,
+        2377
+      ],
+      "seethrough_full_elapsed_s": 173.2,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 44205,
+        "neckwear": 79,
+        "back hair": 25928
+      }
+    }
+  ],
+  "passing_frame_test": [
+    72004,
+    72005,
+    72006
+  ],
+  "chosen": 72004
+}

@@ -1,0 +1,86 @@
+{
+  "key": "scarf",
+  "seed": 72004,
+  "checkpoint": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors",
+  "checkpoint_source": "Pony Diffusion V6 XL, version \"V6 (start with this one)\", https://civitai.com/models/257749",
+  "loras": [],
+  "trigger": "",
+  "sampler": {
+    "steps": 30,
+    "cfg": 6.0,
+    "sampler": "euler_ancestral",
+    "scheduler": "normal"
+  },
+  "control": {
+    "skeleton": "stand_sides",
+    "strength": 0.8,
+    "end_percent": 0.7,
+    "start_percent": 0.0,
+    "model": "controlnet-openpose-sdxl-1.0.safetensors",
+    "model_note": "read from the ComfyUI workflow embedded in painting.png (its tEXt \"prompt\" chunk), which is left in the file as provenance"
+  },
+  "latent": [
+    832,
+    1216
+  ],
+  "upscale": "4x-AnimeSharp.pth (ImageUpscaleWithModel), then ImageScaleBy lanczos x0.5; read from the workflow embedded in painting.png",
+  "size": [
+    1664,
+    2432
+  ],
+  "elapsed_s": 18.5,
+  "painted_by": "`spine-parts comfy paint` (spine-parts' own ComfyUI adapter), not the reference implementation's generation script that painted `sample` and `demo`",
+  "prompt_parts": {
+    "identity": "1girl, solo, adult woman, shoulder-length straight black hair, brown eyes, soft smile, fair skin",
+    "costume": "very long red knitted scarf wrapped once around the neck, both long scarf ends hanging straight down the front of the body past the waist to the thighs, scarf fringe at the ends, beige knit sweater, dark green pleated skirt to the knees, black tights, brown loafers, fully clothed, empty hands",
+    "pose": "full body, head to toe, entire body in frame, front view, facing viewer, looking at viewer, standing, arms at sides, relaxed arms, relaxed pose",
+    "style": "anime illustration, detailed, soft shading, (white background:1.3), simple background, plain background",
+    "negative_extra": "revealing clothes, bare shoulders, off shoulder, 2girls, multiple girls, holding, bag, weapon, clouds, cloud, sun, sky, sky background, grey background, blue background, gradient background, scenery, outdoors, from behind, back view, back of head, facing away, vignette, beige background, brown background, dark background, black background, spotlight, lighting gradient, hands in pockets, coat, jacket",
+    "negative_pose": "cropped, out of frame, cut off feet, close-up, portrait, upper body, from side, profile, sitting, kneeling, dynamic pose, arms raised, hand on face, contact shadow, cast shadow, floor, multiple views, reference sheet",
+    "pose_note": "generation.pose is absent, so the pose words are the stand_sides skeleton's own ('standing, arms at sides, relaxed arms, relaxed pose') after spine-parts' framing words; unlike `sample` and `demo`, the positive carries no 'feet visible, shoes'"
+  },
+  "positive": "score_9, score_8_up, score_7_up, source_anime, masterpiece, best quality, highly detailed, 1girl, solo, adult woman, shoulder-length straight black hair, brown eyes, soft smile, fair skin, very long red knitted scarf wrapped once around the neck, both long scarf ends hanging straight down the front of the body past the waist to the thighs, scarf fringe at the ends, beige knit sweater, dark green pleated skirt to the knees, black tights, brown loafers, fully clothed, empty hands, full body, head to toe, entire body in frame, front view, facing viewer, looking at viewer, standing, arms at sides, relaxed arms, relaxed pose, anime illustration, detailed, soft shading, (white background:1.3), simple background, plain background",
+  "negative": "score_4, score_3, score_2, score_1, worst quality, low quality, lowres, blurry, jpeg artifacts, nsfw, nude, naked, cleavage, underwear, sexual, suggestive, child, loli, shota, kid, toddler, text, watermark, signature, logo, bad anatomy, bad hands, extra fingers, deformed, mutated, revealing clothes, bare shoulders, off shoulder, 2girls, multiple girls, holding, bag, weapon, clouds, cloud, sun, sky, sky background, grey background, blue background, gradient background, scenery, outdoors, from behind, back view, back of head, facing away, vignette, beige background, brown background, dark background, black background, spotlight, lighting gradient, hands in pockets, coat, jacket, cropped, out of frame, cut off feet, close-up, portrait, upper body, from side, profile, sitting, kneeling, dynamic pose, arms raised, hand on face, contact shadow, cast shadow, floor, multiple views, reference sheet",
+  "seed_selection": {
+    "table": "candidates.json (6 seeds, measured; the images are not published)",
+    "rule": "refuse a painting by the frame test; then fewest layers_warn_lines; then most layers_full; then lowest seed; the frame test refuses a painting with a border pixel whose minimum channel is 200 or less",
+    "rule_note": "the rule is recorded in the character config's seed note; that it was fixed before the paintings were looked at is the producer's statement, which the files do not show",
+    "refused": [
+      72001,
+      72002,
+      72003
+    ],
+    "refused_note": "the frame test refused 72001-72003 for grey backgrounds that reach the border, not for cut figures: the figure stands inside the frame in all six paintings (seen by eye on downscaled copies, not measured), and a grey background makes the test's box the whole image",
+    "tied": [
+      72004,
+      72005,
+      72006
+    ],
+    "tie_note": "72004, 72005 and 72006 all have 0 WARN lines and 29 layers. 'Most layers' separated nothing: the wrapper wrote all 29 tags in all six runs, near-empty ones included (tail and wings, which the painting has nothing for, hold 76-81 opaque px in every run), so the tie fell to the lowest seed",
+    "chosen": 72004,
+    "figures": {
+      "paint_elapsed_s": 18.5,
+      "border_px_min_channel_le_200": 0,
+      "border_median_rgb": [
+        252,
+        250,
+        244
+      ],
+      "bbox_min_channel_le_200": [
+        547,
+        166,
+        1122,
+        2374
+      ],
+      "seethrough_full_elapsed_s": 170.3,
+      "layers_warn_lines": 0,
+      "layers_full": 29,
+      "opaque_px": {
+        "topwear": 95461,
+        "neckwear": 76,
+        "back hair": 75
+      }
+    },
+    "why": "lowest seed among the three that pass the frame test with 0 WARN lines and 29 layers; colour and costume fidelity were not criteria"
+  }
+}
