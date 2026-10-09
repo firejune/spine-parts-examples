@@ -1,9 +1,9 @@
 # spine-parts-examples
 
 The heavy inputs of the public example characters of
-[spine-parts](https://github.com/firejune/spine-parts): for each character, the
+[rig-parts](https://github.com/firejune/rig-parts): for each character, the
 painting, the two images See-through was fed, and the two See-through layer
-sets that came back. spine-parts tracks the light half of each example — the
+sets that came back. rig-parts tracks the light half of each example — the
 character config, the proposal, the reference implementation's outputs and
 small contact sheets — under `examples/<key>/`, and fetches this repository
 into its gitignored `examples/<key>/inputs/`.
@@ -23,7 +23,7 @@ third-party character.
   layers/full/layers.json       the ComfyUI See-through wrapper's manifest for the full run
   layers/full/meta.json         the run record: elapsed seconds, settings, layer names
   layers/full/parts/<tag>.png   one RGBA PNG per See-through layer, named by its tag
-demo/python-reference/          the reference implementation's rendered idle loop (gif, webp) and its two README images, kept for comparison with what spine-parts renders
+demo/python-reference/          the reference implementation's rendered idle loop (gif, webp) and its two README images, kept for comparison with what rig-parts renders
   layers/head/...               the same for the head run
   generation.json               the generation record: checkpoint, sampler, control, seed, prompts, and how the seed was chosen
 demo/candidates.json            the demo's eighteen measured candidates (figures only; the other images are not published)
@@ -55,12 +55,12 @@ the per-seed figures the seed was chosen on and the reason for the choice.
 
 `scarf` differs in three things. Its control skeleton is `stand_sides`
 (standing, arms relaxed at the sides) instead of `stand_clasp`, at the same
-strength 0.8, start 0.0 and end 0.7. It was painted by spine-parts' own
-`spine-parts comfy paint` rather than the reference implementation's
+strength 0.8, start 0.0 and end 0.7. It was painted by rig-parts' own
+`rig-parts comfy paint` rather than the reference implementation's
 generation script, so its pose words are the skeleton's own and its positive
 has no "feet visible, shoes". Its seed was chosen on a different test, written
 in its `generation.json`: refuse a painting with a border pixel whose minimum
-channel is 200 or less, then fewest `spine-parts layers` WARN lines, then most
+channel is 200 or less, then fewest `rig-parts layers` WARN lines, then most
 layers, then lowest seed. Checkpoint, sampler, steps, cfg, latent, upscaler
 and downscale are the same as above, read from the workflow embedded in its
 `painting.png`.
@@ -73,10 +73,10 @@ version), resolution 1024, 30 steps, seed 42, offload on, LaMa off. Two runs
 per character: `full` on the white-padded painting, `head` on a square crop
 around the head. Each run's elapsed seconds are in its `meta.json`.
 
-`scarf`'s two runs were queued by `spine-parts comfy seethrough` with the same
+`scarf`'s two runs were queued by `rig-parts comfy seethrough` with the same
 settings (resolution 1024, 30 steps, seed 42, offload on, LaMa off, as its
 `meta.json` records); the wrapper version installed for them was not recorded.
-Its See-through inputs were cut by `spine-parts inputs`: the full input is the
+Its See-through inputs were cut by `rig-parts inputs`: the full input is the
 painting at x 384 with 384 px of white either side, the head input a 370x370
 crop at `[639, 144, 1009, 514]` (x0, y0, x1, y1 in painting pixels; the
 demo's is 790x790). Both are RGBA with every alpha 255, where the other two
@@ -140,13 +140,13 @@ they are not a licence this repository grants.
 
 See-through and its wrapper are not redistributed here, only their output.
 
-## How spine-parts fetches this
+## How rig-parts fetches this
 
-`bun run fetch-examples` in a spine-parts checkout runs
+`bun run fetch-examples` in a rig-parts checkout runs
 `scripts/fetch-examples.sh`, which clones this repository at the commit the
 script pins — never a branch — and copies, for every `examples/<key>/` of
-spine-parts that has a counterpart here, `painting.png`, `inputs/*` and
+rig-parts that has a counterpart here, `painting.png`, `inputs/*` and
 `layers/` into `examples/<key>/inputs/`. It keeps any file already on disk,
-prints what it copied and kept per character, and names any spine-parts
-example with no counterpart here. A new commit here reaches spine-parts only
+prints what it copied and kept per character, and names any rig-parts
+example with no counterpart here. A new commit here reaches rig-parts only
 when the pin there is moved.
